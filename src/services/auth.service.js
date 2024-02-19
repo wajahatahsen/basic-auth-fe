@@ -1,7 +1,8 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import config from '../config.json'
 
-const API_BASE_URL = 'http://localhost:9000';
+const API_BASE_URL = config.API_BASE_URL;
 
 async function login(username, password) {
   try {
