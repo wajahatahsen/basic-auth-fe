@@ -20,6 +20,11 @@ function Login() {
       }
   };
 
+  const handleSignup = async (e) => {
+    e.preventDefault();
+    navigate('/signup');
+  };
+
   return (
     <div className="auth-container">
       <h2>Login</h2>
@@ -43,6 +48,8 @@ function Login() {
           />
         </div>
         <button className = "app-button" type="submit">Login</button>
+        <br />
+        <button className="app-button" type="button" onClick={handleSignup}>Signup</button>
       </form>
     </div>
   );

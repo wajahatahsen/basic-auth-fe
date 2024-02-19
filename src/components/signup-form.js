@@ -29,6 +29,11 @@ function Signup() {
     
   };
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    navigate('/login');
+  };
+
   const handlePasswordChange = (e) => {
     const newPassword = e.target.value;
     setPassword(newPassword);
@@ -89,6 +94,8 @@ function Signup() {
           />
         </div>
         <button className = "app-button" type="submit">Sign Up</button>
+        <br />
+        <button className="app-button" type="button" onClick={handleLogin}>Login</button>
       </form>
     </div>
   );
