@@ -19,7 +19,7 @@ function Signup() {
     e.preventDefault();
     if (isValidPassword) {
         const data = await signup(name, username, email, password);
-        if (!data.error) {
+        if (data && !data.error) {
             setToken(data.access_token);
             navigate('/application');
         }
@@ -94,7 +94,7 @@ function Signup() {
           />
         </div>
         <button className = "app-button" type="submit">Sign Up</button>
-        <br />
+        <div className="nav-instruction">Already have an account? Please login.</div>
         <button className="app-button" type="button" onClick={handleLogin}>Login</button>
       </form>
     </div>

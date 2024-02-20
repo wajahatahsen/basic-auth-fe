@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
       const data = await login(username, password);
-      if (!data.error) {
+      if (data && !data.error) {
         setToken(data.access_token);
         navigate('/application');
       }
@@ -48,7 +48,7 @@ function Login() {
           />
         </div>
         <button className = "app-button" type="submit">Login</button>
-        <br />
+        <div className="nav-instruction">New here? Please signup.</div>
         <button className="app-button" type="button" onClick={handleSignup}>Signup</button>
       </form>
     </div>

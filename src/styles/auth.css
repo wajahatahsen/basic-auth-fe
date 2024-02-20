@@ -11,6 +11,13 @@
     margin-bottom: 15px;
     margin-right: 25px;
   }
+
+  .nav-instruction {
+    margin: 15px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+  }
   
   label {
     display: block;
